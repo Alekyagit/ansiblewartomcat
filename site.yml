@@ -1,0 +1,12 @@
+---
+- name: Setup EC2
+  hosts: server-tomcat
+  gather_facts: no
+  roles:
+    - infrastructure
+- name: install tomcat
+  remote_user: root
+  sudo: yes
+  hosts: launched_servers
+  roles:
+    - tomcat
