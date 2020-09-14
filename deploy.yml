@@ -1,0 +1,7 @@
+---
+- name: deploy app
+  remote_user: root
+  sudo: yes
+  hosts: server-tomcat
+  roles:
+    - deploy_app
